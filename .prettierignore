@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+
+# typescript
+next-env.d.ts
+
+# production
+/public
+package-lock.json
