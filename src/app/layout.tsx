@@ -7,6 +7,7 @@
  */
 
 import "@/styles/globals.css";
+import { Providers } from "@/context/providers";
 import { Josefin_Sans } from "next/font/google";
 
 const josefinSans = Josefin_Sans({
@@ -27,8 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={josefinSans.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={josefinSans.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

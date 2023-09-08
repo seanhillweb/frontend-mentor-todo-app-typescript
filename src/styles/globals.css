@@ -18,4 +18,5 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   @apply text-base md:text-lg;
+  @apply bg-scheme-light-100 dark:bg-scheme-dark-100;
 }
