@@ -6,6 +6,7 @@
  * @link https://nextjs.org/docs/app/api-reference/file-conventions/layout
  */
 
+import Script from "next/script";
 import "@/styles/globals.css";
 import { Providers } from "@/context/providers";
 import { Josefin_Sans } from "next/font/google";
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={josefinSans.className}>
         <Providers>{children}</Providers>
       </body>
+      <Script src="/static/support-color-mode.js" />
     </html>
   );
 }
