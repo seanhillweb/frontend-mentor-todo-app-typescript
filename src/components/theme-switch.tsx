@@ -1,6 +1,8 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import SunSvgComponent from "./svgs/sun";
+import MoonSvgComponent from "./svgs/moon";
 
 export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
@@ -8,9 +10,11 @@ export const ThemeSwitch = () => {
   return (
     <button
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className=""
+      className="inline-block"
     >
-      Toggle Mode
+      <span className="sr-only">Toggle Light or Dark Mode</span>
+      <SunSvgComponent className="fill-scheme-light-100 hidden dark:block" />
+      <MoonSvgComponent className="fill-scheme-light-100 block dark:hidden" />
     </button>
   );
 };
