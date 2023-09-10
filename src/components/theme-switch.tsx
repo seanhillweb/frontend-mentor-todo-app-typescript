@@ -11,8 +11,9 @@ export const ThemeSwitch = () => {
     <button
       onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
       className="inline-block"
+      aria-label="Toggle theme"
     >
-      <span className="sr-only">Toggle Light or Dark Mode</span>
+      <span className="sr-only">Current theme: {theme}</span>
       <SunSvgComponent className="fill-scheme-light-100 hidden dark:block" />
       <MoonSvgComponent className="fill-scheme-light-100 block dark:hidden" />
     </button>
