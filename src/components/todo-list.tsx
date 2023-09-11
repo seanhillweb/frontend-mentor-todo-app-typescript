@@ -10,17 +10,23 @@ const Count = () => {
 
 const Filter = () => {
   return (
-    <div className="text-scheme-light-400 dark:text-scheme-dark-600 flex flex-row items-center justify-between gap-x-4 text-sm font-bold">
-      <button>All</button>
-      <button>Active</button>
-      <button>Completed</button>
+    <div className="flex flex-row items-center justify-between gap-x-4">
+      <button className="text-scheme-light-400 dark:text-scheme-dark-600 hover:text-scheme-light-500 dark:hover:text-scheme-dark-300 text-sm font-bold">
+        All
+      </button>
+      <button className="text-scheme-light-400 dark:text-scheme-dark-600 hover:text-scheme-light-500 dark:hover:text-scheme-dark-300 text-sm font-bold">
+        Active
+      </button>
+      <button className="text-scheme-light-400 dark:text-scheme-dark-600 hover:text-scheme-light-500 dark:hover:text-scheme-dark-300 text-sm font-bold">
+        Completed
+      </button>
     </div>
   );
 };
 
 const ClearCompleted = () => {
   return (
-    <button className="text-scheme-light-400 dark:text-scheme-dark-600 text-sm">
+    <button className="text-scheme-light-400 dark:text-scheme-dark-600 hover:text-scheme-light-500 dark:hover:text-scheme-dark-300 text-sm">
       Clear completed
     </button>
   );
@@ -47,7 +53,7 @@ const TodoItem = () => {
 
 export default function TodoList() {
   return (
-    <div className="dark:bg-scheme-dark-200 flex flex-col overflow-hidden rounded-md bg-white">
+    <div className="dark:bg-scheme-dark-200 flex flex-col overflow-hidden rounded-md bg-white shadow-lg">
       <ul className="list-none">
         <TodoItem />
         <TodoItem />
